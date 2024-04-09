@@ -1,7 +1,10 @@
+const users = [];
+
 export const usersRepository = {
-  users: [],
   createUser() {},
-  getUsers() {},
+  getUsers() {
+    return users;
+  },
   deleteUser() {},
   getUserHobbies() {},
   updateUserHobbies() {},

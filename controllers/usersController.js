@@ -5,7 +5,9 @@ export const usersController = {
     return usersRepository.createUser(req, res);
   },
   getUsers(req, res) {
-    return usersRepository.getUsers(req, res);
+    const users = usersRepository.getUsers(req, res);
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(users));
   },
   deleteUser(req, res, userId) {
     return usersRepository.deleteUser(req, res, userId);

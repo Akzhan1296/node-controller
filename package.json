@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Simple REST API built with Node.js",
   "main": "index.js",
+  "type":"module",
   "scripts": {
+    "r": "nodemon index.js",
     "start": "pm2 start index.js --name node-rest-api",
     "stop": "pm2 stop node-rest-api"
   },
@@ -11,5 +13,8 @@
   "license": "MIT",
   "dependencies": {
     "pm2": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
